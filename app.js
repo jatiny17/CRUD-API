@@ -12,6 +12,10 @@ app.use(express.json());
 app.use("/login", login);
 app.use("/api/people", people);
 
+app.get("/", (req, res) => {
+    res.status(200).send("Home Page");
+})
+
 app.listen(port, () => {
     console.log("Listening on port 5000");
 })
